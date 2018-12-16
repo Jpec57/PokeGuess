@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PokeGuess</string>
+    <string name="enter_the_name_of_the_pokemon_here">Entre le nom du pokémon ici</string>
+    <string name="suck">Dommage...\nC\'était %s</string>
+    <string name="rock">"Bien joué ! \nC'était "</string>
+    <string name="hint">indice</string>
+    <string name="advice">Besoin d\'un indice ?</string>
+    <string name="hard">dur</string>
+    <string name="easy">facile</string>
+</resources>

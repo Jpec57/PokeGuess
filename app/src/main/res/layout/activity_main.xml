@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/enter_the_name_of_the_pokemon_here"
+                android:autofillHints="Enter the name of the pokemon here"
+                android:id="@+id/pokemon_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/validate"
+                tools:targetApi="o"
+                android:inputType="text"/>
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/validate"
+                android:src="@drawable/check"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                android:contentDescription="@string/app_name"/>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline_horizontal_up"
+            app:layout_constraintGuide_percent="0.1"
+            android:orientation="horizontal"
+    />
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline_vertical"
+            app:layout_constraintGuide_percent="0.2"
+            android:orientation="vertical"
+    />
+
+    <ImageView
+            android:id="@+id/img"
+            android:contentDescription="@string/app_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/question_mark"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_up"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical1"
+            />
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline_vertical1"
+            app:layout_constraintGuide_percent="0.8"
+            android:orientation="vertical"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_up"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fire"
+                android:id="@+id/streak"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/right"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/zero"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/fire"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/done_black"
+                android:id="@+id/right"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/zero"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/done_black"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/close"
+                android:id="@+id/wrong"
+                app:layout_constraintTop_toBottomOf="@id/right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/zero"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/close"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline_horizontal"
+            app:layout_constraintGuide_percent="0.4"
+            android:orientation="horizontal"
+    />
+
+    <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/difficulty"
+            android:background="@android:color/transparent"
+            android:textOn="@string/hard"
+            android:textOff="@string/easy"
+            app:layout_constraintTop_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+    />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/hint"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal2"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical1"
+    />
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/sound"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/sound"
+            app:layout_constraintTop_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal2"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical1"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline_horizontal2"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="horizontal"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_up"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
+            app:layout_constraintStart_toStartOf="@id/guideline_vertical1"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+                android:contentDescription="@string/app_name"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fr"
+                android:id="@+id/fr"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/us"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="1.0"/>
+
+        <ImageView
+                android:contentDescription="@string/app_name"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/us"
+                android:id="@+id/us"
+                app:layout_constraintTop_toBottomOf="@id/fr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/pokebox"
+            android:id="@+id/descriptionBox"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="30sp"
+                android:paddingEnd="30sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constrainedHeight="true"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:id="@+id/description"
+        />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

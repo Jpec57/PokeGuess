@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PokeGuess</string>
+    <string name="rock">"You rock ! \nThat was %s"</string>
+    <string name="suck">"You suck !\nThat was %s"</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="hint">hint</string>
+    <string name="hard">hard</string>
+    <string name="easy">easy</string>
+    <string name="advice">Need advice ?</string>
+    <string name="enter_the_name_of_the_pokemon_here">Enter the name of the pokemon here</string>
+</resources>
